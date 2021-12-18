@@ -1,0 +1,81 @@
+
+button:focus{
+    box-shadow: none !important;
+    border: none !important;
+}
+.food hr{
+    /* box-shadow: 10px 10px 3px 2px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 1px 1px 4px rgb(0 0 0 / 30%) !important;
+}
+
+.food .item1{
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px 1px rgb(0 0 0 / 16%), 0px 0px 5px 1px rgb(0 0 0 / 16%);
+    box-sizing: border-box;
+    padding: 0px;
+}
+.food .img-div{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.food .Item-inside{
+    display: flex ;
+    justify-content: center ;
+}
+.food .img-div{
+    
+}
+.food .img-fluid{
+    width: 100%;
+    border-radius: 12px 0 0 12px;
+}
+.food .img-fluid:hover{
+    transform: scaleY(1.1);
+    transition:all .3s ease-in-out;
+}
+.food .main-title h1{
+    padding-top: 1rem;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.food .price-list h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: #929314;
+}
+.food p{
+    font-size: 1rem !important;
+}
+.food .price-list{
+    margin-bottom: 0px;
+}
+.food .row{
+    margin-right: 0;
+    margin-left: 0px;
+}
+.food .btn-primary{
+    background-color: #4db6ac;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+.food .btn-primary:hover{
+    border-color: #00695c;
+    outline: none;
+    border: none;
+}
+.food .btn-warning:hover{
+    border-color: black;
+    color: whitesmoke;
+    outline: none ;
+}
+
+
+@media (max-width:1000px) {
+    .food .img-fluid{
+    border-radius: 5px;
+}
+}

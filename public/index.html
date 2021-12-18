@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type='image/x-icon' href="favicon.ico">
+    <!-- <a target="_blank" href="https://icons8.com/icon/qcorqjBI0xqK/xbox-y">Xbox Y</a> icon by <a target="_blank"
+      href="https://icons8.com">Icons8</a> -->
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- counterUp scr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  </head>
+  <body>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+    
+    </div>
+    
+    <script>
+      $(document).ready(function () {
+
+      //For Active Nav
+        $('.navbar-toggler').click(function(){
+          $('.navbar').toggleClass('shows')
+        })
+        // $('li.items').click(function () {  /// {li.items ===comes in tag  li}
+        //   $('li.items ').removeClass('active1'); ////{active can be defined in css}
+        //   $(this).addClass('active1');
+        // });
+
+      //For Fixed Navbar on Scroll
+        $(document).scroll(function () {
+          var nav = $(".navbar-fixed-top");
+          nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
+        });
+
+
+
+      //When Click on particular nav-item it can auto remove from nav and scroll
+        $('html').click(function (event) {
+          if (!$(event.target).closest('.navbar-nav').length) {
+              $(".navbar-collapse").collapse('hide');
+          }
+
+
+        });
+
+        // $('.navbar-collapse a').click(function () {
+        //   $(".navbar-collapse").collapse('hide');
+        // });event.stopPropagation();
+
+        // $('.navbar-toggler').click(function () {
+        //   $('.navbar').toggleClass('navb')
+        // })
+
+      // For Counter Incresement
+        $('.counter').counterUp({
+          delay: 10,
+          time: 1000
+        });
+        
+      //move background image
+        $(window).scroll(function () {
+          let scroll = $(window).scrollTop();
+          $('.Bim h1').css({
+            'background-position-y': scroll + 'px'
+          })
+        });
+
+      });
+
+</script>
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<!-- aos script -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 500,
+  });
+</script>
+  </body>
+</html>
