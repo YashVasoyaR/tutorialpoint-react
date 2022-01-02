@@ -42,7 +42,7 @@ export default function Pokemon() {
             {/* <Error /> */}
             <div className='poke'>
                 <div className="container">
-                    <h1 className='text-center'>I'm Picachu</h1>
+                    <h1 className='text-center'>I'm {names}</h1>
                     {/* {data.map(item => <li>{item}</li>)} */}
                     
                     <h4>You Choose {data} which name is : { names}</h4>
