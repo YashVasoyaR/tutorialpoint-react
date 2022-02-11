@@ -19,7 +19,7 @@ const App=()=>   {
   return (
     
     <div >
-      <Switch>
+      <Switch basename="/">
         <Route exact path='/' component={Home} ></Route>
         <Route exact path='/about' component={AboutUs} ></Route>
         <Route exact path='/workout' component={OurWork} ></Route>
