@@ -33,7 +33,7 @@ const App=()=>   {
         <Route exact path='/food' component={FoodApi}></Route>
         <Route exact path='/ypay' component={Ypay}></Route>
         <Route exact path='/footer' component={Footer}></Route>
-        <Route component={Error}></Route>
+        <Route path="*" component={Error}></Route>
       </Switch>
       
     </div>
